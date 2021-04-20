@@ -27,6 +27,12 @@ function Player:update(dt)
   end
 end
 
+function Player:keyPressed(key)
+  if key == "space" then
+      table.insert(listOfBullets, Bullet(self.x, self.y))
+  end
+end
+
 function Player:draw()
   love.graphics.draw(self.image, self.x, self.y)
 end
